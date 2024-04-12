@@ -8,7 +8,7 @@ const listaDeTeclas = document.querySelectorAll('.tecla');
 
 
 
-// ENQUANTO o contador for MENOR que o tamanho da lista de teclas (9) será feito os procedimentos dentro do BLOCO {}
+// PARA contador que recebe/começa com 0 ; ENQUANTO o contador for MENOR que o tamanho da lista de teclas (9) será feito os procedimentos dentro do BLOCO {} e por fim, incrementado +1
 for (let contador = 0; contador < listaDeTeclas.length; contador++) {
     
     // Criamos uma constate elemento, que vai receber o o nome da classe[1] que é uma "STRING",  através da const listaDeTeclas[contador] , e como é um loop vai ser do 0 até o 9
