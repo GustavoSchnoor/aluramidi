@@ -15,13 +15,23 @@ for (let contador = 0; contador < listaDeTeclas.length; contador++) {
     const tecla = listaDeTeclas[contador];
     const instrumento = tecla.classList[1];
     const idAudio = `#som_${instrumento}`;
-    console.log(idAudio);
+    // console.log(idAudio);
 
     // Ao clicar no botão correspondente ao indice [0-9] vamos receber o que a função ANONIMA nos trás, que é a chamativa da função tocaSom(idAudio) 
     tecla.onclick = function () {
         tocaSom(idAudio);
     };
-    console.log(contador);
+    // console.log(contador);
+
+    tecla.onkeydown = function() {
+        tecla.classList.add('ativa');
+    }
+    
+    tecla.onkeyup = function () {
+        tecla.classList.remove('ativa');
+    }
+
+
 }
 
 

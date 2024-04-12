@@ -34,6 +34,7 @@ todosBotoes[3].addEventListener('click', function() {
 
 // 4) Utilizando método while para aplicar contador
 
+/*
 let contador = 0;
 let vezesClicado = 0;
 
@@ -45,3 +46,8 @@ while (contador < todosBotoes.length) {
 
     contador++
 }
+*/
+
+// 5) Utilizando método while para aplicar contador
+
+// ( ACABEI FAZENDO A 1 DESSE JEITO, ENTÃO A 5 E A 1 SÃO A MSM COISA)
