@@ -1,6 +1,12 @@
 // Criamos uma função que tem um parametro (idElementoAudio) e assim, será dado play no audio, atraves do id recebido.
-function tocaSom(idElementoAudio) {
-    document.querySelector(idElementoAudio).play();
+function tocaSom(seletorAudio) {
+    const elemento = document.querySelector(seletorAudio);
+
+    if (elemento != null && elemento.localName === 'audio') {
+        elemento.play();
+    } else {
+        console.log('Elemento não encontrado ou seletor inválido');
+    }
 }
 
 // Criamos uma constante listaDeTeclas que recebe TODAS teclas (button) com a classe ".tecla"
@@ -23,13 +29,17 @@ for (let contador = 0; contador < listaDeTeclas.length; contador++) {
     };
     // console.log(contador);
 
-    tecla.onkeydown = function() {
-        tecla.classList.add('ativa');
+    tecla.onkeydown = function(evento) {
+        console.log(evento);
+        if (evento.code === 'Space' || evento.code === 'Enter') {
+            tecla.classList.add('ativa');
+        }
     }
     
     tecla.onkeyup = function () {
         tecla.classList.remove('ativa');
     }
+
 
 
 }
